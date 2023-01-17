@@ -1,0 +1,49 @@
+clc
+clear all
+radius = 5;
+intencity =.01;
+pi = 22/7;
+points_list = [];
+for theta = 0:intencity:2*pi
+X = radius*cos(theta);
+Y = radius*sin(theta);
+points = [X,Y];
+disp(points)
+
+points =  [points;X,Y];
+plot(X,Y,'--.k', 'LineWidth', 2, 'MarkerSize', 1)
+hold on;
+xlim([-15,15]); ylim([-15,15]);
+xlabel('x-axis');
+ylabel ('y-axis');
+end
+
+points = [X,Y];
+disp(points)
+
+
+% for cir_x = -radius:intencity: radius
+%     cir_y =sqrt(radius^2-cir_x^2);
+%     disp([cir_x,cir_y])
+%     disp([cir_x,-cir_y])
+%     disp([cir_y,cir_x])
+%     disp([-cir_y,cir_x])
+% 
+% 
+% 
+%     plot(cir_x,cir_y,'--.k', 'LineWidth', 2, 'MarkerSize', 1);
+%     hold on;
+%     plot(cir_x,-cir_y,'--.k', 'LineWidth', 2, 'MarkerSize', 1);
+%     hold on;
+%     
+%     plot(cir_y,cir_x,'--.k', 'LineWidth', 2, 'MarkerSize', 1);
+%     hold on;
+%     plot(-cir_y,cir_x,'--.k', 'LineWidth', 2, 'MarkerSize', 1);
+%     hold on;
+% 
+%     xlim([-15,15]); ylim([-15,15]);
+%     xlabel('x-axis');
+%     ylabel ('y-axis');
+%   
+% 
+% end
